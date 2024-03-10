@@ -10,11 +10,15 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
+
+
 # Make port 8501 available to the world outside this container
 EXPOSE 8501
+
+ENV PORT=8501
 
 # Define environment variable
 ENV PYTHONPATH=/app
 
 # Run app.py when the container launches
-CMD ["streamlit", "run", "--server.port", "8501", "stream.py"]
+CMD streamlit run stream.py --server.port $PORT
