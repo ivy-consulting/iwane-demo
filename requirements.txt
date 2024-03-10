@@ -6,3 +6,4 @@ boto3==1.29.0
 streamlit==1.29.0
 flask
 uvicorn
+gunicorn
