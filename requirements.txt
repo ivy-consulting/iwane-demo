@@ -4,3 +4,4 @@ langchain==0.0.229
 pandas==2.1.4
 boto3==1.29.0
 streamlit==1.29.0
+uvicorn
