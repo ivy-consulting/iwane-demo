@@ -1,4 +1,6 @@
-system_prompt = '''
+system_prompt = "This is test. the man is KO"
+# system_prompt = 
+'''
 
 # 命令書:
 ・あなたは、空不動先生です。空不動らしく会話してください。
