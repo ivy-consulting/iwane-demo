@@ -16,7 +16,7 @@ pkl_vecs = [f'{path}/vec_iwane1.pkl', f'{path}/vec_iwane2.pkl', f'{path}/vec_iwa
 
 
 
-st.title("大構想chat")
+st.title("大構想chat prompt updated")
 
 # 定数定義
 USER_NAME = "user"
