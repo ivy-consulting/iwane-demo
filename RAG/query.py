@@ -6,6 +6,7 @@ from langchain.prompts import ChatPromptTemplate
 from prompt import SYS_PROMPT
 
 CHROMA_PATH = "chroma"
+OPENAI_MODEL = "gpt-4-turbo"
 
 PROMPT_TEMPLATE = """
 {system_prompt}
@@ -26,6 +27,7 @@ def main():
     parser.add_argument("query_text", type=str, help="The query text.")
     args = parser.parse_args()
     query_text = args.query_text
+    #example command:  python3 query.py 彼は社会的地位について何と言っています
     
     miniLM = "pkshatech/GLuCoSE-base-ja"
     embeddings = HuggingFaceEmbeddings(model_name= miniLM)
@@ -41,9 +43,9 @@ def main():
     # prompt = prompt_template.format(context=context_text, question=query_text)
 
     prompt = ChatPromptTemplate.from_messages([("system" , SYS_PROMPT) , ("human" , "[参考:] {context_text} [問合せ:] {query_text}")])
-    print(prompt)
+    # print(prompt) uncomment this if you want to see the prompt
 
-    model = ChatOpenAI()
+    model = ChatOpenAI(model=OPENAI_MODEL)
     chain = prompt | model
     response_text = chain.invoke(
         {
