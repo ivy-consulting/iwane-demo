@@ -2,3 +2,4 @@
 RAG/chroma/chroma.sqlite3 filter=lfs diff=lfs merge=lfs -text
 *.sqlite3 filter=lfs diff=lfs merge=lfs -text
 chromal.sqlite3 filter=lfs diff=lfs merge=lfs -text
+../chroma.sqlite3 filter=lfs diff=lfs merge=lfs -text
